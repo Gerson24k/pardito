@@ -37,5 +37,12 @@ namespace pardito
             //Cerrar el archivo, esta linea es importante porque sino despues de correr varias veces el programa daría error de que el archivo quedó abierto muchas veces. Entonces es necesario cerrarlo despues de terminar de leerlo.
             reader.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = animales;
+            dataGridView1.Refresh();
+        }
     }
 }
